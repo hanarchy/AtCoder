@@ -1,7 +1,6 @@
 #include <cmath>
 #include <cstdio>
 
-#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <map>
@@ -16,6 +15,19 @@ using namespace std;
 typedef long long int ll;
 
 int main(){
+  ll a,b,c,x;
+  cin >> a >> b >> c >> x;
+  int cnt=0;
+  rep(i, a+1){
+    rep(j, b+1){
+      rep(k, c+1){
+        if(i*500 + j*100 + k*50 == x){
+          ++cnt;
+        }
+      }
+    }
+  }
+  cout << cnt;
 
   return 0;
 }
