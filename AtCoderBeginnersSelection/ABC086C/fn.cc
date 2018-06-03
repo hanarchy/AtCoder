@@ -27,7 +27,8 @@ int main() {
   bool flag = true;
   rep(i, n) {
     cin >> t >> x >> y;
-    if ((t-c_pos.pret) >= abs(x - c_pos.x) + abs(y - c_pos.y) && ((t-c_pos.pret) - (x - c_pos.x) - (y - c_pos.y)) % 2 == 0) {
+    if ((t - c_pos.pret) >= abs(x - c_pos.x) + abs(y - c_pos.y)
+        && ((t - c_pos.pret) - (x - c_pos.x) - (y - c_pos.y)) % 2 == 0) {
       c_pos.x = x;
       c_pos.y = y;
       c_pos.pret = t;
@@ -36,6 +37,6 @@ int main() {
       break;
     }
   }
-  cout << (flag? "Yes" : "No") << endl;
+  cout << (flag ? "Yes" : "No") << endl;
   return 0;
 }
