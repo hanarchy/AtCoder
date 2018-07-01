@@ -18,7 +18,21 @@ using namespace std;
 typedef long long int ll;
 
 int main() {
-  ios::sync_with_stdio(false);
+  ll n;
+  cin >> n;
+
+  vector<ll> p(n);
+  ll sumcnt=1000000;
+  rep(i,n){
+    cin >> p.at(i);
+    ll cnt=0;
+    while(p.at(i)%10==0){
+      ++cnt;
+      p.at(i) /= 10;
+    }
+    sumcnt = min(sumcnt, cnt);
+  }
+  cout << sumcnt <<endl;
 
   return 0;
 }

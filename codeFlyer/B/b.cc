@@ -12,7 +12,7 @@ int main() {
   for (int i = 0; i < n; ++i) {
     s = x.substr(i, 1);
     if (s == "S" && a >= 1) --a;
-    if (s == "C" && b >= 1) --b;
+    if (s == "300" && b >= 1) --b;
     if (s == "E") {
       if (a >= b && a >= 1) --a;
       else if (b >= 1) --b;

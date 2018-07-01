@@ -16,9 +16,31 @@
 
 using namespace std;
 typedef long long int ll;
-
+struct sss{
+  ll kaisou;
+  bool isleft;
+};
 int main() {
-  ios::sync_with_stdio(false);
+  string s;
+  cin >> s;
+  deque<ll> que;
+  vector<sss> v(s.size());
+  ll kaisou =0;
+  rep(i, s.size()){
+    sss k;
+    if(s[i]=='('){
+      ++kaisou;
+      k.isleft=true;
+    }
+    else{
+      --kaisou;
+      k.isleft=false;
+    }
+    k.kaisou = kaisou;
+    v.push_back(k);
+  }
+
+
 
   return 0;
 }
