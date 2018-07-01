@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/hanarchy/CLionProjects/AtCoder/other/ABC097C/fn.cc
+cmath
+-
+cstdio
+-
+stack
+-
+queue
+-
+algorithm
+-
+iostream
+-
+vector
+-
+map
+-
+numeric
+-
+string
+-
+array
+-
+
