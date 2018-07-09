@@ -1,7 +1,6 @@
 #include <cmath>
 #include <cstdio>
-#include <limits>
-#include <tuple>
+
 #include <stack>
 #include <queue>
 #include <algorithm>
@@ -16,10 +15,14 @@
 #define all(x) x.begin(), x.end()
 
 using namespace std;
-using ll = long long;
+typedef long long int ll;
 
 int main() {
-  ios::sync_with_stdio(false);
+  int n;
+
+  ll a[n], ans1=0, ans2=1e9+2;
+  cin >> n;
+  rep(i,n)
 
   return 0;
 }

@@ -1,7 +1,6 @@
 #include <cmath>
 #include <cstdio>
-#include <limits>
-#include <tuple>
+
 #include <stack>
 #include <queue>
 #include <algorithm>
@@ -20,6 +19,19 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
+  ll n;
+  cin >> n;
+
+  ll a;
+  ll cnt4=0, cnt0=0;
+  rep(i, n){
+    cin >> a;
+    if(a%4==0) ++cnt4;
+    if(a%2==1) ++cnt0;
+  }
+  if((cnt4 + cnt0 == n and cnt4 + 1>= cnt0)or cnt4>=cnt0) cout << "Yes" << endl;
+  else cout << "No" << endl;
+
 
   return 0;
 }

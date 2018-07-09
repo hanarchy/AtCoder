@@ -1,7 +1,6 @@
 #include <cmath>
 #include <cstdio>
-#include <limits>
-#include <tuple>
+
 #include <stack>
 #include <queue>
 #include <algorithm>
@@ -20,6 +19,11 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
+  ll a, b;
+  cin >> a >> b;
+  if(a+b == 15) cout << "+" << endl;
+  else if(a*b == 15) cout << "*" << endl;
+  else cout << "x" << endl;
 
   return 0;
 }

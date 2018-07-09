@@ -1,7 +1,6 @@
 #include <cmath>
 #include <cstdio>
-#include <limits>
-#include <tuple>
+
 #include <stack>
 #include <queue>
 #include <algorithm>
@@ -20,6 +19,15 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
+  string s;
+  cin >> s;
+  ll w;
+  cin >> w;
+//  string ans;
+  rep(i , s.size()){
+    if (i%w==0) cout << s[i];
+  }
+  cout << endl;
 
   return 0;
 }
