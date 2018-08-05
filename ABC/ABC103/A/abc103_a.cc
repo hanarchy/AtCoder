@@ -21,12 +21,14 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
-  ll n, k, x, y;
-  cin >> n >> k >> x >> y;
-  ll ans = 0;
-  rep(i, n) {
-    ans += i >= k ? y : x;
-  }
+  ll a1, a2, a3;
+  cin >> a1 >> a2 >> a3;
+  vector<ll> v;
+  v.push_back(abs(a1 - a2));
+  v.push_back(abs(a1 - a3));
+  v.push_back(abs(a3 - a2));
+  sort(all(v));
+  ll ans = v.at(0) + v.at(1);
 
   cout << ans << endl;
 

@@ -11,7 +11,6 @@
 #include <numeric>
 #include <string>
 #include <array>
-#include <iomanip>
 
 #define rep(i, n) for (int i = 0; i < (int)(n); ++i)
 #define all(x) x.begin(), x.end()
@@ -21,14 +20,21 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
-  ll n, k, x, y;
-  cin >> n >> k >> x >> y;
-  ll ans = 0;
+
+  ll n;
+  cin >> n;
+
+  vector<ll> a(n);
   rep(i, n) {
-    ans += i >= k ? y : x;
+    cin >> a.at(i);
   }
-
-  cout << ans << endl;
-
+  ll cnt = 0;
+  for (int i = n - 1; i > 0; --i) {
+    if (a.at(i) > a.at(i - 1)) cnt += a.at(i) - a.at(i - 1);
+    else if(a.at(i-1) == 0) cnt += a.at(i);
+    else if(a.at(i)!=0) ++cnt;
+  }
+  if (a.at(0) == 0) cout << cnt << endl;
+  else cout << -1 << endl;
   return 0;
 }

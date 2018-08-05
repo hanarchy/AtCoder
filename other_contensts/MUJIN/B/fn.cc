@@ -21,14 +21,23 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
-  ll n, k, x, y;
-  cin >> n >> k >> x >> y;
-  ll ans = 0;
-  rep(i, n) {
-    ans += i >= k ? y : x;
-  }
+  ll a;
+  cin >> a;
+  string s;
+  cin >> s;
+  bool flag = false;
+  if (a == 0) flag = true;
 
-  cout << ans << endl;
+  rep(i, s.size()) {
+    if (s.at(i) == '+') {
+      ++a;
+    } else {
+      --a;
+    }
+    if (a == 0) flag = true;
+  }
+  if (flag) cout << "Yes" << endl;
+  else cout << "No" << endl;
 
   return 0;
 }

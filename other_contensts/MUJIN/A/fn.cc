@@ -21,14 +21,15 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
-  ll n, k, x, y;
-  cin >> n >> k >> x >> y;
-  ll ans = 0;
-  rep(i, n) {
-    ans += i >= k ? y : x;
+  string s;
+  cin >> s;
+  bool flag = false;
+  if (s.size() >= 5) {
+    if (s.substr(0, 5) == "MUJIN")
+      flag = true;
   }
-
-  cout << ans << endl;
+  if (flag) cout << "Yes" << endl;
+  else cout << "No" << endl;
 
   return 0;
 }

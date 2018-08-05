@@ -21,14 +21,13 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
-  ll n, k, x, y;
-  cin >> n >> k >> x >> y;
-  ll ans = 0;
+  ll a, n, sum = 0;
+  cin >> n;
   rep(i, n) {
-    ans += i >= k ? y : x;
+
+    cin >> a;
+    sum += a - 1;
   }
-
-  cout << ans << endl;
-
+  cout << sum << endl;
   return 0;
 }

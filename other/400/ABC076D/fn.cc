@@ -21,14 +21,24 @@ using ll = long long;
 
 int main() {
   ios::sync_with_stdio(false);
-  ll n, k, x, y;
-  cin >> n >> k >> x >> y;
-  ll ans = 0;
-  rep(i, n) {
-    ans += i >= k ? y : x;
+  ll n;
+  cin >> n;
+  vector<ll> t(n), v(n);
+  rep(i, n) cin >> t.at(i);
+  rep(i, n) cin >> v.at(i);
+  v.push_back(0);
+
+  ll sumt = accumulate(all(t),0);
+  vector<ll> va(sumt+1, 0);
+
+  ll curti=0;
+  rep(i, sumt+1){
+    if(i>t.at(curti))++curti;
+    sumt
   }
 
-  cout << ans << endl;
+
+
 
   return 0;
 }
